@@ -345,6 +345,7 @@
   <!-- Top Navigation Links -->
   <nav class="top-links">
     <a href="index.html" class="topics-link">Topics</a>
+    <a href="#quiz" class="review-link">Review Questions</a>
   </nav>
   <hr>
 
@@ -354,13 +355,28 @@
     <div class="left-column">
       <aside class="sidebar">
         <h2>Table of Contents</h2>
+        <h3>Password Strength</h3>
+        <ol>
+          <li><a href="passwords.html#length">Length</a></li>
+          <li><a href="passwords.html#unpredictability">Unpredictability</a></li>
+          <li><a href="passwords.html#twofa">Two-factor Authentication (2FA)</a></li>
+          <li><a href="passwords.html#quiz">Quiz</a></li>
+        </ol>
         <h3>Scams & Fraud</h3>
         <ol>
-          <li><a href="#phishing">Phishing</a></li>
-          <li><a href="#social">Social Engineering</a></li>
-          <li><a href="#scam-examples">Common Scam Examples</a></li>
-          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="scams-and-fraud.html#malware">Phishing</a></li>
+          <li><a href="scams-and-fraud.html#social">Social Engineering</a></li>
+          <li><a href="scams-and-fraud.html#scam-examples">Common Scam Examples</a></li>
+          <li><a href="scams-and-fraud.html#quiz">Quiz</a></li>
         </ol>
+        <h3>Phishing Scams</h3>
+        <ol>
+          <li><a href="phishing.html#recognition">Recognizing Phishing</a></li>
+          <li><a href="phishing.html#typical-signs">Typical Signs</a></li>
+          <li><a href="phishing.html#prevention">Prevention Methods</a></li>
+          <li><a href="phishing.hjtml#quiz">Quiz</a></li>
+        </ol>
+        
       </aside>
 
       <div class="references-box">
@@ -378,20 +394,20 @@
       <h1>Scams and Fraud</h1>
       <p>Scams and fraud can affect anyone. Learning how to identify and avoid them is key to protecting yourself online.</p>
 
-      <h2 id="phishing">Phishing</h2>
-      <p>Phishing is when scammers impersonate legitimate institutions to trick you into giving away sensitive data like passwords or credit card numbers.</p>
+      <h2 id="malware">Malware</h2>
+      <p>Malware (short for malicious software) is any software designed to harm, exploit, or otherwise compromise a device, network, or user. Malware can steal personal data, disrupt system operations, or give attackers unauthorized access. It often spreads through infected files, links, or software downloads.</p>
       <ul>
-        <li>Look out for suspicious emails, especially those asking for personal info.</li>
-        <li>Hover over links to check if the destination matches the sender.</li>
-        <li>Don’t download attachments from unknown sources.</li>
+        <li>Malware can disguise itself as legitimate software, tricking users into downloading and running it unknowingly.</li>
+        <li>Businesses are common targets, with malware used to steal customer data or hold systems hostage for ransom.</li>
+        <li>Keeping software updated helps protect against malware by patching security vulnerabilities attackers might exploit.</li>
       </ul>
 
       <h2 id="social">Social Engineering</h2>
-      <p>Social engineering involves manipulating people into revealing confidential information.</p>
+      <p>Social engineering is a manipulation tactic where attackers trick individuals into revealing confidential information or performing actions that compromise security. Instead of hacking systems directly, these attackers exploit human psychology. Common techniques include impersonating authority figures, creating fake emergencies, or using persuasive language to bypass skepticism.</p>
       <ul>
-        <li>Scammers may impersonate co-workers or IT personnel.</li>
-        <li>They use urgency, fear, or curiosity to get you to act.</li>
-        <li>Always verify identities before sharing information.</li>
+        <li>Scammers may pose as delivery services or banks, asking you to “confirm” personal details through fake forms.</li>
+        <li>Phone calls and text messages can be just as dangerous as emails—they may pressure you to act quickly or threaten account suspension.</li>
+        <li>Even small talk or casual questions can be used to gather bits of information for future attacks.</li>
       </ul>
 
       <h2 id="scam-examples">Common Scam Examples</h2>
@@ -423,72 +439,140 @@
           <div id="explanations"></div>
           <button class="restart-btn" id="restart-quiz">Take Quiz Again</button>
         </div>
+    <div class="question-container" id="question2">
+        <div class="question">2. What should you do if someone claiming to be IT staff requests your login credentials?</div>
+        <ul class="answers">
+            <li><input type="radio" name="answer2" value="0" id="q2a0"><label for="q2a0">Give them your info to avoid problems</label></li>
+            <li><input type="radio" name="answer2" value="1" id="q2a1"><label for="q2a1">Ask them to verify their identity and report the incident</label></li>
+            <li><input type="radio" name="answer2" value="2" id="q2a2"><label for="q2a2">Ignore the message and keep working</label></li>
+        </ul>
+        <button id="submit2">Submit Answer</button>
+        <div class="feedback" id="feedback2"></div>
+        </div>
+        <div class="question-container" id="question3">
+        <div class="question">3. Which scam involves building emotional trust to eventually ask for money?</div>
+        <ul class="answers">
+            <li><input type="radio" name="answer3" value="0" id="q3a0"><label for="q3a0">Tech support scam</label></li>
+            <li><input type="radio" name="answer3" value="1" id="q3a1"><label for="q3a1">Romance scam</label></li>
+            <li><input type="radio" name="answer3" value="2" id="q3a2"><label for="q3a2">Phishing scam</label></li>
+        </ul>
+        <button id="submit3">Submit Answer</button>
+        <div class="feedback" id="feedback3"></div>
+        </div>
+        <div class="quiz-results" id="quiz-results">
+        <h3>Quiz Results</h3>
+        <div class="score" id="score">You scored: <span id="score-value">0</span>/3</div>
+        <div id="explanations"></div>
+        <button class="restart-btn" id="restart-quiz">Take Quiz Again</button>
+        </div>
       </div>
 
       <script>
         document.addEventListener('DOMContentLoaded', function () {
-          const correctAnswers = { 1: "1" };
-          const explanations = {
-            1: "Phishing emails often create urgency and ask you to verify personal details."
+          const correctAnswers = {
+            1: "1",
+            2: "1",
+            3: "1"
           };
-
-          let userAnswers = { 1: null };
-
-          const feedback1 = document.getElementById('feedback1');
-          const submit1 = document.getElementById('submit1');
-          const question1 = document.getElementById('question1');
+          const explanations = {
+            1: "Phishing emails often create urgency and ask you to verify personal details.",
+            2: "Always verify identity before sharing login credentials, even if the person claims to be from IT.",
+            3: "Romance scams involve emotional manipulation to extract money from victims."
+          };
+          const userAnswers = { 1: null, 2: null, 3: null };
+          const feedbackElements = [
+            document.getElementById('feedback1'),
+            document.getElementById('feedback2'),
+            document.getElementById('feedback3')
+          ];
+          const submitButtons = [
+            document.getElementById('submit1'),
+            document.getElementById('submit2'),
+            document.getElementById('submit3')
+          ];
+          const questionContainers = [
+            document.getElementById('question1'),
+            document.getElementById('question2'),
+            document.getElementById('question3')
+          ];
           const results = document.getElementById('quiz-results');
-          const scoreVal = document.getElementById('score-value');
+          const scoreValue = document.getElementById('score-value');
           const explanationsDiv = document.getElementById('explanations');
           const restart = document.getElementById('restart-quiz');
 
-          submit1.addEventListener('click', () => {
-            const selected = document.querySelector('input[name="answer1"]:checked');
-            if (!selected) {
-              feedback1.textContent = "Please select an answer!";
-              feedback1.className = "feedback";
-              return;
-            }
-            userAnswers[1] = selected.value;
-            if (selected.value === correctAnswers[1]) {
-              feedback1.textContent = "Correct!";
-              feedback1.className = "feedback correct";
-            } else {
-              feedback1.textContent = "Incorrect.";
-              feedback1.className = "feedback incorrect";
-            }
-            submit1.disabled = true;
-
-            const viewBtn = document.createElement('button');
-            viewBtn.textContent = "View Results";
-            viewBtn.addEventListener('click', showResults);
-            feedback1.appendChild(document.createElement('br'));
-            feedback1.appendChild(viewBtn);
+          submitButtons.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+              const qNum = index + 1;
+              const selected = document.querySelector(`input[name="answer${qNum}"]:checked`);
+              const feedback = feedbackElements[index];
+              if (!selected) {
+                feedback.textContent = "Please select an answer!";
+                feedback.className = "feedback";
+                return;
+              }
+              userAnswers[qNum] = selected.value;
+              if (selected.value === correctAnswers[qNum]) {
+                feedback.textContent = "Correct!";
+                feedback.className = "feedback correct";
+              } else {
+                feedback.textContent = "Incorrect.";
+                feedback.className = "feedback incorrect";
+              }
+              submitButtons[index].disabled = true;
+              if (qNum < 3) {
+                const nextBtn = document.createElement('button');
+                nextBtn.textContent = "Next Question";
+                nextBtn.addEventListener('click', () => {
+                  questionContainers[index].classList.remove('active');
+                  questionContainers[index + 1].classList.add('active');
+                });
+                feedback.appendChild(document.createElement('br'));
+                feedback.appendChild(nextBtn);
+              } else {
+                const viewBtn = document.createElement('button');
+                viewBtn.textContent = "View Results";
+                viewBtn.addEventListener('click', showResults);
+                feedback.appendChild(document.createElement('br'));
+                feedback.appendChild(viewBtn);
+              }
+            });
           });
 
           function showResults() {
-            question1.classList.remove('active');
+            questionContainers.forEach(q => q.classList.remove('active'));
             let score = 0;
             explanationsDiv.innerHTML = '';
-            if (userAnswers[1] === correctAnswers[1]) {
-              score++;
-              explanationsDiv.innerHTML = '<div class="explanation correct"><strong>Question 1 (Correct):</strong> ' + explanations[1] + '</div>';
-            } else {
-              explanationsDiv.innerHTML = '<div class="explanation wrong"><strong>Question 1 (Incorrect):</strong> ' + explanations[1] + '</div>';
+            for (let i = 1; i <= 3; i++) {
+              const div = document.createElement('div');
+              div.className = 'explanation';
+              if (userAnswers[i] === correctAnswers[i]) {
+                div.classList.add('correct');
+                div.innerHTML = `<strong>Question ${i} (Correct):</strong> ${explanations[i]}`;
+                score++;
+              } else {
+                div.classList.add('wrong');
+                div.innerHTML = `<strong>Question ${i} (Incorrect):</strong> ${explanations[i]}`;
+              }
+              explanationsDiv.appendChild(div);
             }
-            scoreVal.textContent = score;
+            scoreValue.textContent = score;
             results.style.display = 'block';
           }
 
           restart.addEventListener('click', () => {
-            userAnswers[1] = null;
-            document.querySelectorAll('input[name="answer1"]').forEach(r => r.checked = false);
-            feedback1.textContent = '';
-            feedback1.className = 'feedback';
-            submit1.disabled = false;
+            for (let i = 1; i <= 3; i++) {
+              userAnswers[i] = null;
+              document.querySelectorAll(`input[name="answer${i}"]`).forEach(r => r.checked = false);
+              feedbackElements[i - 1].textContent = '';
+              feedbackElements[i - 1].className = 'feedback';
+              submitButtons[i - 1].disabled = false;
+            }
             results.style.display = 'none';
-            question1.classList.add('active');
+            questionContainers.forEach(q => q.classList.remove('active'));
+            questionContainers[0].classList.add('active');
           });
+
+          questionContainers[0].classList.add('active');
         });
       </script>
     </main>
