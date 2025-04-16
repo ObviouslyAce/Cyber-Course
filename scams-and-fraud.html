@@ -326,6 +326,26 @@
       text-decoration: underline;
     }
   </style>
+  <script>
+    // keys of our three articles
+    const articleKeys = [
+      "passwordsArticle",
+      "scamsAndFraudArticle",
+      "phishingArticle"
+    ];
+  
+    function updateProgress() {
+      // count how many are “true”
+      const doneCount = articleKeys
+        .filter(key => localStorage.getItem(key) === "true")
+        .length;
+      const pct = Math.round((doneCount / articleKeys.length) * 100);
+      document.querySelector(".progress-percentage").textContent = pct + "%";
+    }
+  
+    document.addEventListener("DOMContentLoaded", updateProgress);
+  </script>
+  
 </head>
 <body>
   <!-- Top Bar -->
@@ -335,7 +355,7 @@
     </div>
     <div class="center">
       <div class="progress-title">Course Progress</div>
-      <div class="progress-percentage">60%</div>
+      <div class="progress-percentage">0%</div>
     </div>
     <div class="right">
       <img src="profile.png" alt="User Icon">
@@ -420,6 +440,7 @@
       <!-- Quiz Section -->
       <div class="quiz-container" id="quiz">
         <h3>Scams and Fraud Quiz</h3>
+        <p>Must get all questions right to increase completion percentage.</p>
 
         <!-- One example question -->
         <div class="question-container active" id="question1">
@@ -435,7 +456,7 @@
 
         <div class="quiz-results" id="quiz-results">
           <h3>Quiz Results</h3>
-          <div class="score" id="score">You scored: <span id="score-value">0</span>/1</div>
+          <div class="score" id="score">You scored: <span id="score-value">0</span>/3</div>
           <div id="explanations"></div>
           <button class="restart-btn" id="restart-quiz">Take Quiz Again</button>
         </div>
@@ -556,6 +577,10 @@
               explanationsDiv.appendChild(div);
             }
             scoreValue.textContent = score;
+            if (score === 3) {
+              // all answers correct → mark the scams-and-fraud article done
+              localStorage.setItem("scamsAndFraudArticle", "true");
+            }
             results.style.display = 'block';
           }
 
