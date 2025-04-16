@@ -66,7 +66,6 @@
       font-weight: bold;
       cursor: pointer;
     }
-    /* Topics link goes to index.html */
     .top-links a.topics-link {
       color: inherit;
     }
@@ -212,6 +211,7 @@
       border-radius: 4px;
       cursor: pointer;
       width: 100%;
+      margin-top: 5px;
     }
     button:hover {
       background-color: #0056b3;
@@ -254,13 +254,17 @@
       margin-bottom: 15px;
     }
     .explanation {
-      margin-bottom: 10px;
       padding: 10px;
       border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .explanation.correct {
+      background-color: #d4edda;
+      color: #155724;
     }
     .explanation.wrong {
       background-color: #f8d7da;
-      border-left: 4px solid #dc3545;
+      color: #721c24;
     }
     .restart-btn {
       margin-top: 15px;
@@ -273,17 +277,17 @@
       border: 1px solid #ddd;
       border-radius: 4px;
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 20px auto;
       background: #f9f9f9;
     }
     .email-analyzer textarea {
       width: 100%;
+      height: 200px;
+      font-family: monospace;
       padding: 10px;
-      margin-top: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
-      height: 100px;
+      resize: vertical;
     }
     .email-analyzer p {
       margin-top: 10px;
@@ -297,8 +301,7 @@
       border: 1px solid #ddd;
       border-radius: 4px;
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 20px auto;
       background: #fefefe;
     }
     .report-phishing h2 {
@@ -358,17 +361,10 @@
         </ol>
         <h3>Password Strength</h3>
         <ol>
-          <li><a href="C:\School Stuff\Tech120\Webpage_PROJECT\passwords.html#length">Length</a></li>
-          <li><a href="C:\School Stuff\Tech120\Webpage_PROJECT\passwords.html#unpredictability">Unpredictability</a></li>
-          <li><a href="C:\School Stuff\Tech120\Webpage_PROJECT\passwords.html#twofa">Two-factor Authentication (2FA)</a></li>
-          <li><a href="C:\School Stuff\Tech120\Webpage_PROJECT\passwords.html#quiz">Quiz</a></li>
-        </ol>
-        <h3>CIA Triad</h3>
-        <ol>
-          <li>Confidentiality</li>
-          <li>Integrity</li>
-          <li>Availability</li>
-          <li>Quiz</li>
+          <li><a href="passwords.html#length">Length</a></li>
+          <li><a href="passwords.html#unpredictability">Unpredictability</a></li>
+          <li><a href="passwords.html#twofa">Two-factor Authentication (2FA)</a></li>
+          <li><a href="passwords.html#quiz">Quiz</a></li>
         </ol>
       </aside>
       <!-- References Box under the Sidebar -->
@@ -391,44 +387,18 @@
       
       <h2 id="recognition">Recognizing Phishing</h2>
       <p>
-        Phishing attempts can come through multiple channels, making them particularly dangerous:
-      </p>
-      <ul>
-        <li>Email phishing: Deceptive emails claiming to be from legitimate organizations</li>
-        <li>Spear phishing: Targeted attacks using personal information about you</li>
-        <li>Smishing: SMS text message phishing</li>
-        <li>Vishing: Voice call phishing</li>
-      </ul>
-      <p>
-        For example, you might receive an urgent email appearing to be from your bank asking you to "verify your account" by clicking a link.
+        Phishing attempts can arrive via email, text, voice, or social media. For example, an urgent email from your bank asking you to verify your account is a common tactic.
       </p>
       
       <h2 id="typical-signs">Typical Signs</h2>
       <p>
-        Look out for these red flags that often indicate a phishing attempt:
-      </p>
-      <ul>
-        <li>Generic greetings like "Dear Customer" instead of your name</li>
-        <li>Poor grammar, spelling errors, or unusual phrasing</li>
-        <li>Requests for personal information or credentials</li>
-        <li>Suspicious or mismatched URLs (hover before clicking)</li>
-        <li>Creating a false sense of urgency or threat</li>
-      </ul>
-      <p>
-        Attackers frequently use urgency tactics like "Your account will be suspended in 24 hours unless you verify your information" to rush you into making mistakes.
+        Look for red flags such as generic greetings, poor grammar, requests for personal info, mismatched URLs, and false urgency.
       </p>
       
       <h2 id="prevention">Prevention Methods</h2>
       <p>
-        Protect yourself from phishing attacks with these proven methods:
+        Protect yourself by typing URLs directly, enabling two-factor authentication, verifying requests via official channels, and keeping your software updated.
       </p>
-      <ul>
-        <li>Never click suspicious links—type the official website address directly in your browser</li>
-        <li>Enable two-factor authentication on all important accounts</li>
-        <li>Verify requests for information by contacting the company directly using official contact information</li>
-        <li>Keep software, browsers, and security tools updated</li>
-        <li>Use anti-phishing features in your email service and security software</li>
-      </ul>
       
       <!-- Quiz Section -->
       <div class="quiz-container" id="quiz">
@@ -465,7 +435,7 @@
           <ul class="answers">
             <li>
               <input type="radio" name="answer2" value="0" id="q2a0">
-              <label for="q2a0">Click the link and enter your information if the email looks official</label>
+              <label for="q2a0">Click the link and enter your information</label>
             </li>
             <li>
               <input type="radio" name="answer2" value="1" id="q2a1">
@@ -473,11 +443,11 @@
             </li>
             <li>
               <input type="radio" name="answer2" value="2" id="q2a2">
-              <label for="q2a2">Contact your bank directly using the official phone number on their website or the back of your card</label>
+              <label for="q2a2">Contact your bank directly using the official number from their website</label>
             </li>
             <li>
               <input type="radio" name="answer2" value="3" id="q2a3">
-              <label for="q2a3">Reply to the email asking for confirmation that it's legitimate</label>
+              <label for="q2a3">Reply to the email to confirm it's legitimate</label>
             </li>
           </ul>
           <button id="submit2">Submit Answer</button>
@@ -486,7 +456,7 @@
         
         <!-- Question 3 -->
         <div class="question-container" id="question3">
-          <div class="question">3. Which type of phishing targets specific individuals using personal information about them?</div>
+          <div class="question">3. Which type of phishing targets specific individuals using personal information?</div>
           <ul class="answers">
             <li>
               <input type="radio" name="answer3" value="0" id="q3a0">
@@ -509,7 +479,7 @@
           <div class="feedback" id="feedback3"></div>
         </div>
         
-        <!-- Results Section (initially hidden) -->
+        <!-- Results Section -->
         <div class="quiz-results" id="quiz-results">
           <h3>Quiz Results</h3>
           <div class="score" id="score">You scored: <span id="score-value">0</span>/3</div>
@@ -518,6 +488,135 @@
         </div>
       </div>
       
+      <script>
+        // Sequential Quiz Script with Next Question buttons
+        document.addEventListener('DOMContentLoaded', function() {
+          let currentQuestion = 1;
+          const totalQuestions = 3;
+          let userAnswers = { 1: null, 2: null, 3: null };
+          const correctAnswers = {
+            1: "2", // Correct: Personalized greeting with your correct name is typically legitimate.
+            2: "2", // Correct: Contact the bank using the official number.
+            3: "1"  // Correct: Spear phishing targets specific individuals.
+          };
+          const explanations = {
+            1: "A personalized greeting with your correct name is usually a sign of a genuine email.",
+            2: "Always use the official contact details found independently, not those provided in the email.",
+            3: "Spear phishing is tailored to specific individuals using personal data."
+          };
+          
+          const submitButtons = [
+            document.getElementById('submit1'),
+            document.getElementById('submit2'),
+            document.getElementById('submit3')
+          ];
+          const feedbackElements = [
+            document.getElementById('feedback1'),
+            document.getElementById('feedback2'),
+            document.getElementById('feedback3')
+          ];
+          const questionContainers = [
+            document.getElementById('question1'),
+            document.getElementById('question2'),
+            document.getElementById('question3')
+          ];
+          const resultsContainer = document.getElementById('quiz-results');
+          const scoreValue = document.getElementById('score-value');
+          const explanationsContainer = document.getElementById('explanations');
+          const restartButton = document.getElementById('restart-quiz');
+          
+          submitButtons.forEach((button, index) => {
+            const questionNumber = index + 1;
+            button.addEventListener('click', () => submitAnswer(questionNumber));
+          });
+          
+          restartButton.addEventListener('click', restartQuiz);
+          
+          function submitAnswer(questionNumber) {
+            const selectedAnswer = document.querySelector(`input[name="answer${questionNumber}"]:checked`);
+            const feedback = feedbackElements[questionNumber - 1];
+            
+            if (!selectedAnswer) {
+              feedback.textContent = "Please select an answer!";
+              feedback.className = "feedback";
+              return;
+            }
+            
+            userAnswers[questionNumber] = selectedAnswer.value;
+            
+            if (selectedAnswer.value === correctAnswers[questionNumber]) {
+              feedback.textContent = "Correct!";
+              feedback.className = "feedback correct";
+            } else {
+              feedback.textContent = "Incorrect.";
+              feedback.className = "feedback incorrect";
+            }
+            
+            // Disable submit button for this question
+            submitButtons[questionNumber - 1].disabled = true;
+            
+            // Add Next Question or View Results button
+            if (questionNumber < totalQuestions) {
+              const nextBtn = document.createElement('button');
+              nextBtn.textContent = "Next Question";
+              nextBtn.addEventListener('click', () => {
+                moveToNextQuestion(questionNumber);
+              });
+              feedback.appendChild(document.createElement('br'));
+              feedback.appendChild(nextBtn);
+            } else {
+              const resultsBtn = document.createElement('button');
+              resultsBtn.textContent = "View Results";
+              resultsBtn.addEventListener('click', showResults);
+              feedback.appendChild(document.createElement('br'));
+              feedback.appendChild(resultsBtn);
+            }
+          }
+          
+          function moveToNextQuestion(current) {
+            questionContainers[current - 1].classList.remove('active');
+            questionContainers[current].classList.add('active');
+          }
+          
+          function showResults() {
+            questionContainers.forEach(q => q.classList.remove('active'));
+            let score = 0;
+            explanationsContainer.innerHTML = '';
+            for (let i = 1; i <= totalQuestions; i++) {
+              const div = document.createElement('div');
+              div.className = 'explanation';
+              if (userAnswers[i] === correctAnswers[i]) {
+                div.classList.add('correct');
+                div.innerHTML = `<strong>Question ${i} (Correct):</strong> ${explanations[i]}`;
+                score++;
+              } else {
+                div.classList.add('wrong');
+                div.innerHTML = `<strong>Question ${i} (Incorrect):</strong> ${explanations[i]}`;
+              }
+              explanationsContainer.appendChild(div);
+            }
+            scoreValue.textContent = score;
+            resultsContainer.style.display = 'block';
+          }
+          
+          function restartQuiz() {
+            for (let i = 1; i <= totalQuestions; i++) {
+              userAnswers[i] = null;
+              const radios = document.querySelectorAll(`input[name="answer${i}"]`);
+              radios.forEach(radio => radio.checked = false);
+              feedbackElements[i-1].textContent = '';
+              feedbackElements[i-1].className = 'feedback';
+              submitButtons[i-1].disabled = false;
+            }
+            resultsContainer.style.display = 'none';
+            questionContainers.forEach(q => q.classList.remove('active'));
+            questionContainers[0].classList.add('active');
+          }
+          
+          // Initialize first question
+          questionContainers[0].classList.add('active');
+        });
+      </script>
       <!-- Email Analyzer Section -->
       <div class="email-analyzer">
         <h2>Phishing Email Analyzer</h2>
@@ -994,166 +1093,18 @@ Amazon Security Team
     }
   }
 });
-        
-        // Sequential Quiz Script
-        document.addEventListener('DOMContentLoaded', function() {
-          // Quiz variables
-          let currentQuestion = 1;
-          const totalQuestions = 3;
-          let userAnswers = {
-            1: null,
-            2: null,
-            3: null
-          };
-          const correctAnswers = {
-            1: "2", // Personalized greeting with your correct name
-            2: "2", // Contact your bank directly using the official phone number
-            3: "1"  // Spear phishing
-          };
-          const explanations = {
-            1: "A personalized greeting with your correct name is not necessarily a sign of a phishing email. While sophisticated phishers may use your name, legitimate communications typically include personal details. The other options are common signs of phishing.",
-            2: "Always contact your bank directly using official contact information you find independently (not from the suspicious email). Never click on links in suspicious emails or use contact information provided in them.",
-            3: "Spear phishing targets specific individuals using personal information gathered about them. Vishing is voice phishing via phone calls, smishing is SMS phishing via text messages, and whaling is targeted phishing aimed at executives or high-profile targets."
-          };
-          
-          // Get DOM elements
-          const submitButtons = [
-            document.getElementById('submit1'),
-            document.getElementById('submit2'),
-            document.getElementById('submit3')
-          ];
-          const feedbackElements = [
-            document.getElementById('feedback1'),
-            document.getElementById('feedback2'),
-            document.getElementById('feedback3')
-          ];
-          const questionContainers = [
-            document.getElementById('question1'),
-            document.getElementById('question2'),
-            document.getElementById('question3')
-          ];
-          const resultsContainer = document.getElementById('quiz-results');
-          const scoreValue = document.getElementById('score-value');
-          const explanationsContainer = document.getElementById('explanations');
-          const restartButton = document.getElementById('restart-quiz');
-          
-          // Add event listeners to submit buttons
-          submitButtons.forEach((button, index) => {
-            const questionNumber = index + 1;
-            button.addEventListener('click', () => submitAnswer(questionNumber));
-          });
-          
-          // Restart quiz button
-          restartButton.addEventListener('click', restartQuiz);
-          
-          function submitAnswer(questionNumber) {
-            const selectedAnswer = document.querySelector(`input[name="answer${questionNumber}"]:checked`);
-            const feedback = feedbackElements[questionNumber - 1];
-            
-            if (!selectedAnswer) {
-              feedback.textContent = "Please select an answer!";
-              feedback.className = "feedback";
-              return;
-            }
-            
-            // Record the user's answer
-            userAnswers[questionNumber] = selectedAnswer.value;
-            
-            // Show feedback
-            if (selectedAnswer.value === correctAnswers[questionNumber]) {
-              feedback.textContent = "Correct!";
-              feedback.className = "feedback correct";
-            } else {
-              feedback.textContent = "Incorrect.";
-              feedback.className = "feedback incorrect";
-            }
-            
-            // Move to next question or show results
-            if (questionNumber < totalQuestions) {
-              // Show next question after a short delay
-              setTimeout(() => {
-                questionContainers[questionNumber - 1].classList.remove('active');
-                questionContainers[questionNumber].classList.add('active');
-              }, 1000);
-            } else {
-              // Show results after the last question
-              setTimeout(showResults, 1000);
-            }
-          }
-          
-          function showResults() {
-            // Hide the last question
-            questionContainers[totalQuestions - 1].classList.remove('active');
-            
-            // Calculate score
-            let score = 0;
-            for (let i = 1; i <= totalQuestions; i++) {
-              if (userAnswers[i] === correctAnswers[i]) {
-                score++;
-              }
-            }
-            
-            // Update score display
-            scoreValue.textContent = score;
-            
-            // Generate explanations for wrong answers
-            explanationsContainer.innerHTML = '';
-            for (let i = 1; i <= totalQuestions; i++) {
-              if (userAnswers[i] !== correctAnswers[i]) {
-                const explanation = document.createElement('div');
-                explanation.className = 'explanation wrong';
-                explanation.innerHTML = `<strong>Question ${i}:</strong> ${explanations[i]}`;
-                explanationsContainer.appendChild(explanation);
-              }
-            }
-            
-            // If all answers were correct
-            if (score === totalQuestions) {
-              const perfectScore = document.createElement('div');
-              perfectScore.className = 'explanation';
-              perfectScore.innerHTML = "Perfect score! You have a good understanding of phishing awareness.";
-              explanationsContainer.appendChild(perfectScore);
-            }
-            
-            // Show results container
-            resultsContainer.style.display = 'block';
-          }
-          
-          function restartQuiz() {
-            // Reset user answers
-            for (let i = 1; i <= totalQuestions; i++) {
-              userAnswers[i] = null;
-              
-              // Clear radio selections
-              const radioButtons = document.querySelectorAll(`input[name="answer${i}"]`);
-              radioButtons.forEach(radio => radio.checked = false);
-              
-              // Clear feedback
-              feedbackElements[i-1].textContent = '';
-              feedbackElements[i-1].className = 'feedback';
-            }
-            
-            // Hide results
-            resultsContainer.style.display = 'none';
-            
-            // Show first question
-            for (let i = 0; i < totalQuestions; i++) {
-              questionContainers[i].classList.remove('active');
-            }
-            questionContainers[0].classList.add('active');
-          }
-        });
-      </script>
+</script>
+      
       
       <!-- Report Phishing Section -->
       <div class="report-phishing">
         <h2>Report Phishing Attempts</h2>
         <p>
-          If you've received a suspicious email or message, report it to help protect others:
+          If you've received a suspicious email or message, help protect others by reporting it:
           <ul>
             <li>Forward phishing emails to <a href="mailto:phishing-report@ftc.gov">phishing-report@ftc.gov</a></li>
             <li>Report to your organization's IT security team</li>
-            <li>Report to the impersonated company's official channels</li>
+            <li>Report via the impersonated company's official channels</li>
           </ul>
         </p>
       </div>
