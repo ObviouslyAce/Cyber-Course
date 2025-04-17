@@ -1,0 +1,98 @@
+﻿Password Strength
+
+
+A strong password is like a good lock on your front door—the stronger the lock, the harder it is for someone to break in. Similarly, the stronger your password, the more secure your account is.
+
+Length
+
+The longer your password, the more difficult it is to guess. Think of it like a lock with more pins—the more pins, the harder it is to pick. A strong password is generally at least 12–16 characters long and uses a variety of characters, such as:
+* Uppercase letters (A–Z)
+* Lowercase letters (a–z)
+* Numbers (0–9)
+* Special characters (!, @, #, $, %)
+
+For example, a good password might be iL0vE$3cur3!, as it combines letters, numbers, and symbols.
+
+Unpredictability
+
+Avoid predictable patterns like:
+* "abc123" or "qwerty"
+* Repeated characters (e.g., "aaaaaa")
+* Sequences (e.g., "12345" or "abcdef")
+
+Hackers use automated tools to quickly guess common passwords, so the more unusual and random your password is, the better.
+
+Two-Factor Authentication (2FA)
+
+Even with a strong password, it’s wise to enable two-factor authentication (2FA). This adds an extra layer of security by requiring a second piece of information—like a secret code—in addition to your password.
+Check Your Password for Breaches
+Unsure if your password has been compromised in a data breach? Visit Have I Been Pwned to verify whether your password appears in any known security incidents.
+________________
+
+Scams and Fraud
+
+
+Scams and fraud can affect anyone. Learning how to identify and avoid them is key to protecting yourself online.
+
+Malware
+
+Malware (short for malicious software) is any software designed to harm, exploit, or otherwise compromise a device, network, or user. Malware can steal personal data, disrupt system operations, or give attackers unauthorized access. It often spreads through infected files, links, or software downloads.
+
+* Malware can disguise itself as legitimate software, tricking users into downloading and running it unknowingly.
+* Businesses are common targets, with malware used to steal customer data or hold systems hostage for ransom.
+* Keeping software updated helps protect against malware by patching security vulnerabilities attackers might exploit.
+
+Social Engineering
+
+Social engineering is a manipulation tactic where attackers trick individuals into revealing confidential information or performing actions that compromise security. Instead of hacking systems directly, these attackers exploit human psychology. Common techniques include impersonating authority figures, creating fake emergencies, or using persuasive language to bypass skepticism.
+* Scammers may pose as delivery services or banks, asking you to “confirm” personal details through fake forms.
+* Phone calls and text messages can be just as dangerous as emails—they may pressure you to act quickly or threaten account suspension.
+* Even small talk or casual questions can be used to gather bits of information for future attacks.
+Common Scam Examples
+* "You've won a prize!" emails asking for bank info.
+* Tech support scams claiming your device is infected.
+* Romance scams building trust over time then asking for money.
+________________
+
+
+Phishing Scams
+
+
+Phishing is like a digital con artist trying to trick you into giving away sensitive information. Scammers impersonate trusted entities to steal your personal data, financial information, or account credentials.
+
+Recognizing Phishing
+
+Phishing attempts can come through multiple channels, making them particularly dangerous:
+* Email phishing: Deceptive emails claiming to be from legitimate organizations
+* Spear phishing: Targeted attacks using personal information about you
+* Smishing: SMS text message phishing
+* Vishing: Voice call phishing
+
+For example, you might receive an urgent email appearing to be from your bank asking you to "verify your account" by clicking a link.
+
+Typical Signs
+
+Look out for these red flags that often indicate a phishing attempt:
+* Generic greetings like "Dear Customer" instead of your name
+* Poor grammar, spelling errors, or unusual phrasing
+* Requests for personal information or credentials
+* Suspicious or mismatched URLs (hover before clicking)
+* Creating a false sense of urgency or threat
+
+Attackers frequently use urgency tactics like "Your account will be suspended in 24 hours unless you verify your information" to rush you into making mistakes.
+
+Prevention Methods
+
+Protect yourself from phishing attacks with these proven methods:
+* Never click suspicious links—type the official website address directly in your browser
+* Enable two-factor authentication on all important accounts
+* Verify requests for information by contacting the company directly using official contact information
+* Keep software, browsers, and security tools updated
+* Use anti-phishing features in your email service and security software
+
+Report Phishing Attempts
+
+If you've received a suspicious email or message, help protect others by reporting it:
+* Forward phishing emails to phishing-report@ftc.gov
+* Report to your organization's IT security team
+* Report via the impersonated company's official channels
